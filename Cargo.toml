@@ -1,0 +1,9 @@
+[package]
+name = "rust-hab-sample"
+version = "0.2.0"
+authors = ["Nolan Davidson <ndavidson@chef.io>"]
+
+[dependencies]
+nickel = "*"
+toml = "0.1"
+redis = "0.5.3"

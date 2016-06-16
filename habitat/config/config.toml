@@ -1,0 +1,13 @@
+[app]
+port = "{{cfg.port}}"
+greeting = "{{cfg.greeting}}"
+
+{{~#if bind.has_redis}}
+{{~#each bind.redis.members}}
+redis_host = "{{ip}}"
+redis_port = "{{port}}"
+{{~/each}}
+{{~else}}
+redis_host = "localhost"
+redis_port = "6379"
+{{~/if}}

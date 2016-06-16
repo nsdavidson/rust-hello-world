@@ -1,0 +1,6 @@
+#!/bin/sh
+
+killall rust-hab-sample || true
+cd {{pkg.svc_path}}
+cat config/config.toml
+./rust-hab-sample

@@ -1,0 +1,12 @@
+app:
+  image: 481602809165.dkr.ecr.us-east-1.amazonaws.com/rust-hab-sample
+  ports:
+    - "5000:5000"
+  environment:
+    HAB_RUST_HAB_SAMPLE: greeting="Hi" port="5000" redis_host="redis" redis_port="6379"
+  #depends_on:
+  #  - redis
+  links:
+    - redis
+redis:
+  image: 481602809165.dkr.ecr.us-east-1.amazonaws.com/redis:latest

@@ -1,0 +1,6 @@
+[app]
+port = "8080"
+greeting = "Hello"
+
+redis_host = "localhost"
+redis_port = "6379"
