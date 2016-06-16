@@ -1,6 +1,5 @@
 #!/bin/sh
 
-killall rust-hab-sample || true
+killall rust-hello-world || true
 cd {{pkg.svc_path}}
-cat config/config.toml
-./rust-hab-sample
+./rust-hello-world

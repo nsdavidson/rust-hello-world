@@ -1,6 +1,6 @@
 pkg_origin=nolan
 pkg_name=rust-hello-world
-pkg_version=0.2.1
+pkg_version=0.1.0
 pkg_maintainer="Nolan Davidson <ndavidson@chef.io>"
 pkg_license=()
 pkg_source=things
@@ -29,5 +29,5 @@ do_build() {
 }
 
 do_install() {
-  cp ../target/release/rust-hab-sample ${pkg_prefix}
+  cp ../target/release/rust-hello-world ${pkg_prefix}
 }

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cp {{pkg.path}}/rust-hab-sample {{pkg.svc_path}}
+cp {{pkg.path}}/rust-hello-world {{pkg.svc_path}}

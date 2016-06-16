@@ -1,6 +1,6 @@
 [root]
-name = "rust-hab-sample"
-version = "0.2.0"
+name = "rust-hello-world"
+version = "0.1.0"
 dependencies = [
  "nickel 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "redis 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)",
