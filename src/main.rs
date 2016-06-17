@@ -24,11 +24,13 @@ fn main() {
 
     let mut server = Nickel::new();
 
+    let node = increment_count(redis_host.as_str().unwrap().to_string(), redis_port.as_str().unwrap().to_string(), "node".to_string()).unwrap().to_string();
+
     server.utilize(router! {
         get "/:name" => |req, _res| {
             let name = req.param("name").unwrap().to_string();
             let count = increment_count(redis_host.as_str().unwrap().to_string(), redis_port.as_str().unwrap().to_string(), name.clone());
-            format!("{} {}!  I have seen you {} times!", greeting.as_str().unwrap().to_string(), name, count.unwrap().to_string())
+            format!("{} {}!  I have seen you {} times!<br><br>You are accessing node {}.", greeting.as_str().unwrap().to_string(), name, count.unwrap().to_string(), &node)
         }
     });
 

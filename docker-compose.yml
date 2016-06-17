@@ -1,20 +1,21 @@
 version: "2"
 services:
   lb:
-    image: dockercloud/haproxy
+    image: nsdavidson/haproxy
+    command: --peer app --bind backend:rust-hello-world.app.default
     links:
       - app
     environment:
-      - DOCKER_TLS_VERIFY
-      - DOCKER_HOST
-      - DOCKER_CERT_PATH
+      HAB_HAPROXY: bind="*:8080"
     ports:
-      - "8080:80"
+      - "8080:8080"
     volumes:
       - $DOCKER_CERT_PATH:$DOCKER_CERT_PATH
+    depends_on:
+      - app
   app:
     image: nsdavidson/rust-hello-world
-    command: --peer redis --bind redis:redis.default
+    command: --peer redis --bind redis:redis.default --group app.default
     environment:
       - EXCLUDE_PORTS=9631
     depends_on:
