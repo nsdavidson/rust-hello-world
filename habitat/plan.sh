@@ -1,4 +1,4 @@
-pkg_origin=nolan
+pkg_origin=nsdavidson
 pkg_name=rust-hello-world
 pkg_version=0.1.0
 pkg_maintainer="Nolan Davidson <ndavidson@chef.io>"
