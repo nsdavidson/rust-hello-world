@@ -2,7 +2,7 @@ version: "2"
 services:
   lb:
     image: nsdavidson/haproxy
-    command: --peer app --bind backend:rust-hello-world.app.default
+    command: --peer app --bind backend:rust-hello-world.default
     links:
       - app
     environment:
@@ -15,9 +15,7 @@ services:
       - app
   app:
     image: nsdavidson/rust-hello-world
-    command: --peer redis --bind redis:redis.default --group app.default
-    environment:
-      - EXCLUDE_PORTS=9631
+    command: --peer redis --bind redis:redis.default
     depends_on:
       - redis
     links:

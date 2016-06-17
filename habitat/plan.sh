@@ -7,11 +7,7 @@ pkg_source=things
 pkg_shasum=stuff
 pkg_deps=(core/coreutils core/gcc-libs core/glibc)
 pkg_build_deps=(core/openssl core/rust core/cacerts core/gcc core/gcc-libs core/glibc)
-pkg_bin_dirs=(bin)
-pkg_include_dirs=(include)
-pkg_lib_dirs=(lib)
 pkg_expose=(8080)
-pkg_service_run="./rust-hab-sample"
 
 do_download() {
   return 0
