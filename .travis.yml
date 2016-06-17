@@ -4,3 +4,6 @@ rust:
     - beta
     - nightly
 script: cargo build
+branches:
+    only:
+        - master

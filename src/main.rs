@@ -1,4 +1,5 @@
-#[macro_use] extern crate nickel;
+#[macro_use]
+extern crate nickel;
 extern crate toml;
 extern crate redis;
 
@@ -24,7 +25,11 @@ fn main() {
 
     let mut server = Nickel::new();
 
-    let node = increment_count(redis_host.as_str().unwrap().to_string(), redis_port.as_str().unwrap().to_string(), "node".to_string()).unwrap().to_string();
+    let node = increment_count(redis_host.as_str().unwrap().to_string(),
+                               redis_port.as_str().unwrap().to_string(),
+                               "node".to_string())
+        .unwrap()
+        .to_string();
 
     server.utilize(router! {
         get "/:name" => |req, _res| {
