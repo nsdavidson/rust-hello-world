@@ -186,7 +186,9 @@ The `-k` argument imports the origin keys for the specified origin, so this shou
 
 Once you've successfully entered the studio, you should see a prompt something like this:
 
-```[1][default:/src:0]#```
+```
+[1][default:/src:0]#
+```
 
 Once you're in the studio environment, we can build our Habitat artifact by executing the `build` command.  This command will look for a `habitat` directroy in the current directory, and we have one of those!
  
