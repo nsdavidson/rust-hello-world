@@ -40,7 +40,8 @@ So we have an awesome app that's sure to be the talk of the internet, now what? 
 
 Our plan is located in the `habitat` directory.  
 
-```tree habitat
+```
+tree habitat
 habitat
 ├── config
 │   └── config.toml
