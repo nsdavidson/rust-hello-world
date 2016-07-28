@@ -9,8 +9,6 @@ services:
       HAB_HAPROXY: bind="*:8080"
     ports:
       - "8080:8080"
-    volumes:
-      - $DOCKER_CERT_PATH:$DOCKER_CERT_PATH
     depends_on:
       - app
   app:
