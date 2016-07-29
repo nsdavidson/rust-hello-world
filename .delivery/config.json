@@ -5,6 +5,8 @@
     "path": ".delivery/build-cookbook"
   },
   "skip_phases": [],
-  "build_nodes": {},
+  "build_nodes": {
+    "default": ["name:build2.local"]
+  },
   "dependencies": []
 }
