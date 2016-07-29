@@ -4,7 +4,7 @@
     "name": "build-cookbook",
     "path": ".delivery/build-cookbook"
   },
-  "skip_phases": [],
+  "skip_phases": ["quality", "security"],
   "build_nodes": {
     "default": ["name:build2.local"]
   },
