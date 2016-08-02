@@ -1,5 +1,5 @@
 # Habitat Demo
-New to Habitat?  Check out the docs and tutorials [here](http://habitat.sh).
+New to Habitat?  Welcome! Check out the docs and tutorials [here](http://habitat.sh).
 
 ## Purpose
 This is a simple Rust web app, but we're going to deploy it in a multi-tiered environment to explore Habitat.
