@@ -2,7 +2,7 @@
 New to Habitat?  Check out the docs and tutorials [here](http://habitat.sh).
 
 ## Purpose
-This is a simple Rust webapp, but we're going to deploy it in a multi-tiered environment to explore Habitat.
+This is a simple Rust web app, but we're going to deploy it in a multi-tiered environment to explore Habitat.
 
 ## Prereqs
 If you want to muck with the application code itself, you'll need a recent version of Rust (I'm using 1.11.0-nightly).  We'll be deploying the app with Docker, so you'll need Docker installed.  You'll need docker-compose, which is included with the Docker Toolbox.  Finally, you'll need a Habitat binary.  Grab one from [here](https://www.habitat.sh/docs/get-habitat/), extract it, and drop the `hab` binary in your path.  
