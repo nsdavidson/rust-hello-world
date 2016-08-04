@@ -7,3 +7,4 @@
 include_recipe 'habitat-build::default'
 include_recipe 'rustlang'
 
+tag('delivery-build-node')
