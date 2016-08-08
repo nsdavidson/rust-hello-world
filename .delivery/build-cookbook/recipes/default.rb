@@ -6,5 +6,6 @@
 
 include_recipe 'habitat-build::default'
 include_recipe 'rustlang'
+package 'curl'
 
 tag('delivery-build-node')
