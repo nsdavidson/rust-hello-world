@@ -5,10 +5,11 @@
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 include_recipe 'habitat-build::provision'
 
+load_delivery_chef_config
+
 gh_token = data_bag_item('secrets', 'github')[:token]
 
-gh_token = ''
-depot_url = node['habitat']['depot_url']
+depot_url = node['habitat-build']['depot-url']
 stage = node['delivery']['change']['stage']
 
 execute 'promote-hab-artifact' do
