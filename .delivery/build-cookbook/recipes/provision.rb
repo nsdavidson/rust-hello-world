@@ -9,5 +9,5 @@ stage = node['delivery']['change']['stage']
 ident = data_bag_item('rust-hello-world', latest)['artifact']['pkg_ident']
 
 execute 'promote-hab-artifact' do
-  command "curl -I -X POST -H \"Authorization: Bearer #{gh_token}\" #{depot_url}/views/#{stage}/pkgs/#{ident}"
+  command "curl -I -X POST -H \"Authorization: Bearer #{gh_token}\" #{depot_url}/views/#{stage}/pkgs/#{ident}/promote"
 end
