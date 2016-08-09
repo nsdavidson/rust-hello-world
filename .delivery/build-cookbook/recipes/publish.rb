@@ -14,5 +14,5 @@ ruby_block 'save-build-version' do
   end
 end
 
-node.set['rust-hello-world'] |= {}
+node.set['rust-hello-world'] = {}
 node.set['rust-hello-world']['build-version'] = build_version
