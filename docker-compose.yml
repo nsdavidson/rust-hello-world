@@ -12,8 +12,8 @@ services:
     depends_on:
       - app
   app:
-    image: nsdavidson/rust-hello-world
-    command: --peer redis --bind redis:redis.default
+    image: nsdavidson/hab
+    command: hab start nsdavidson/rust-hello-world --peer redis --bind redis:redis.default --strategy at-once --url http://192.168.1.116:9636/v1/depot/views/test
     depends_on:
       - redis
     links:
