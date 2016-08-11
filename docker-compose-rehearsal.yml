@@ -1,0 +1,25 @@
+version: "2"
+services:
+  lb:
+    image: nsdavidson/haproxy
+    command: --peer app --bind backend:rust-hello-world.default
+    links:
+      - app
+    environment:
+      HAB_HAPROXY: bind="*:8082"
+    ports:
+      - "8082:8082"
+    depends_on:
+      - app
+    mem_limit: 100000000
+  app:
+    image: nsdavidson/hab
+    command: hab start nsdavidson/rust-hello-world --peer redis --bind redis:redis.default --strategy at-once --url http://depot.nsdavidson.com/v1/depot/views/rehearsal
+    depends_on:
+      - redis
+    links:
+      - redis
+    mem_limit: 100000000
+  redis:
+    image: nsdavidson/redis:latest
+    mem_limit: 100000000
