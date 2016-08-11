@@ -1,10 +1,10 @@
 require 'net/http'
 
 ports = {
-    'acceptance' = '8080',
-    'union' = '8081',
-    'rehearsal' = '8082',
-    'delivered' = '8083'
+    'acceptance' => '8080',
+    'union' => '8081',
+    'rehearsal' => '8082',
+    'delivered' => '8083'
 }
 
 stage = node['delivery']['change']['stage']
