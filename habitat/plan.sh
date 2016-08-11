@@ -1,6 +1,6 @@
 pkg_origin=nsdavidson
 pkg_name=rust-hello-world
-pkg_version=0.1.2
+pkg_version=0.1.3
 pkg_maintainer="Nolan Davidson <ndavidson@chef.io>"
 pkg_license=()
 pkg_source=things
@@ -8,6 +8,7 @@ pkg_shasum=stuff
 pkg_deps=(core/coreutils core/gcc-libs core/glibc)
 pkg_build_deps=(core/openssl core/rust core/cacerts core/gcc core/gcc-libs core/glibc)
 pkg_expose=(8080)
+pkg_svc_run='rust-hello-world'
 
 do_download() {
   return 0
