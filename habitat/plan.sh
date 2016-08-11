@@ -1,6 +1,6 @@
 pkg_origin=nsdavidson
 pkg_name=rust-hello-world
-pkg_version=0.1.0
+pkg_version=0.1.1
 pkg_maintainer="Nolan Davidson <ndavidson@chef.io>"
 pkg_license=()
 pkg_source=things
