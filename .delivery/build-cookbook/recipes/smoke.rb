@@ -1,5 +1,18 @@
-#
-# Cookbook Name:: build-cookbook
-# Recipe:: smoke
-#
-# Copyright (c) 2016 The Authors, All Rights Reserved.
+require 'net/http'
+
+ports = {
+    'acceptance' = '8080',
+    'union' = '8081',
+    'rehearsal' = '8082',
+    'delivered' = '8083'
+}
+
+stage = node['delivery']['change']['stage']
+stage_port = ports[stage]
+host = node['build-cookbook']['rust-hello-world']['host']
+uri = URI("http://#{host}:#{stage_port}/smoke")
+res = Net::HTTP.get_response(uri)
+
+raise 'Response was not a 200' unless res.code == '200'
+
+raise 'Response did not contain the proper content' unless res.body.include?('have seen you') && req.body.include?('smoke')
