@@ -15,4 +15,4 @@ res = Net::HTTP.get_response(uri)
 
 raise 'Response was not a 200' unless res.code == '200'
 
-raise 'Response did not contain the proper content' unless res.body.include?('have seen you') && req.body.include?('smoke')
+raise 'Response did not contain the proper content' unless res.body.include?('have seen you') && res.body.include?('smoke')
