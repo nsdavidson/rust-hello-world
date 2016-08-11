@@ -2,4 +2,4 @@
 
 killall rust-hello-world || true
 cd {{pkg.svc_path}}
-./rust-hello-world
+exec ./rust-hello-world
