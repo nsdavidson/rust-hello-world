@@ -35,7 +35,7 @@ fn main() {
         get "/:name" => |req, _res| {
             let name = req.param("name").unwrap().to_string();
             let count = increment_count(redis_host.as_str().unwrap().to_string(), redis_port.as_str().unwrap().to_string(), name.clone());
-            format!("{} {}!  I have seen you {} times!<br><br>You are accessing node {}.<br><br>This is version 0.1.2", greeting.as_str().unwrap().to_string(), name, count.unwrap().to_string(), &node)
+            format!("{} {}!  I have seen you {} times!<br><br>You are accessing node {}.<br><br>This is version 0.1.3", greeting.as_str().unwrap().to_string(), name, count.unwrap().to_string(), &node)
         }
     });
 

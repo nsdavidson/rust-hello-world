@@ -1,3 +1,0 @@
-#!/bin/sh
-
-cp {{pkg.path}}/rust-hello-world {{pkg.svc_path}}

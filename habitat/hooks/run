@@ -1,5 +1,0 @@
-#!/bin/sh
-
-killall rust-hello-world || true
-cd {{pkg.svc_path}}
-exec ./rust-hello-world

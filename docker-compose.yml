@@ -13,7 +13,7 @@ services:
       - app
   app:
     image: nsdavidson/hab
-    command: hab start nsdavidson/rust-hello-world --peer redis --bind redis:redis.default --strategy at-once --url http://depot.nsdavidson.com/v1/depot/views/test
+    command: hab start nsdavidson/rust-hello-world --peer redis --bind redis:redis.default --strategy at-once --url http://depot.nsdavidson.com/v1/depot/views/acceptance
     depends_on:
       - redis
     links:
