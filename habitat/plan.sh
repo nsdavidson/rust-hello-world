@@ -26,5 +26,5 @@ do_build() {
 }
 
 do_install() {
-  cp ../target/release/rust-hello-world ${pkg_prefix}
+  cp ../target/debug/rust-hello-world ${pkg_prefix}
 }
