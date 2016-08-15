@@ -22,7 +22,7 @@ do_verify() {
   return 0
 }
 do_build() {
-  env SSL_CERT_FILE=$(pkg_path_for cacerts)/ssl/cert.pem cargo build --release
+  env SSL_CERT_FILE=$(pkg_path_for cacerts)/ssl/cert.pem cargo build
 }
 
 do_install() {
