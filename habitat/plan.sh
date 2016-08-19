@@ -22,6 +22,7 @@ do_verify() {
   return 0
 }
 do_build() {
+  cargo clean
   env SSL_CERT_FILE=$(pkg_path_for cacerts)/ssl/cert.pem cargo build
 }
 
