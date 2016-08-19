@@ -29,3 +29,4 @@ do_build() {
 do_install() {
   cp ../target/debug/rust-hello-world ${pkg_prefix}
 }
+
