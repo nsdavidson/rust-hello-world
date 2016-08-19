@@ -2,12 +2,12 @@
 port = "{{cfg.port}}"
 greeting = "{{cfg.greeting}}"
 
-{{~#if bind.has_redis}}
+{{#if bind.has_redis}}
 {{~#each bind.redis.members}}
 redis_host = "{{ip}}"
 redis_port = "{{port}}"
 {{~/each}}
-{{~else}}
+{{else}}
 redis_host = "{{cfg.redis_host}}"
 redis_port = "{{cfg.redis_port}}"
-{{~/if}}
+{{/if}}
